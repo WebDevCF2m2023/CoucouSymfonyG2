@@ -18,6 +18,8 @@ class PostType extends AbstractType
             ->add('postDescription')
             ->add('postDateCreated', null, [
                 'widget' => 'single_text',
+                'empty_data' => date('Y-m-d H:i:s'),
+                'required' => false,
             ])
             ->add('postDatePublished', null, [
                 'widget' => 'single_text',
@@ -27,6 +29,8 @@ class PostType extends AbstractType
                 'class' => Section::class,
                 'choice_label' => 'id',
                 'multiple' => true,
+                'expanded' => true,
+                'required' => false,
             ])
         ;
     }
