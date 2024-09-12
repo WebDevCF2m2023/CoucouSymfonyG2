@@ -12,6 +12,10 @@
         {% endblock %}
     </head>
     <body>
+        <nav>
+            <a href="{{ path('homepage_coucou') }}">Accueil</a>
+            <a href="{{ path('app_admin_post_index') }}">Post CRUD</a>
+        </nav>
         {% block body %}{% endblock %}
     </body>
 </html>

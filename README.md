@@ -229,3 +229,36 @@ On va commencer par la relation `ManyToMany` depuis `Post` vers `Section`
     php bin/console make:entity Post
 
 On choisit `sections` -> `ManyToMany` -> `Section` -> `yes` -> `posts`
+
+#### Pour créer un tag
+
+    git tag -a tagsansespcev0 -m"description"
+
+Pour l'envoyer
+
+    git push origin tagsansespcev0
+
+### CRUD de Post
+
+
+Dans la branche `coucou`
+
+    php bin/console make:crud Post
+    > AdminPostController
+    > test -> yes
+### Création d'un menu
+
+Dans `base.html.twig`, car les fichiers automatiques en héritent tous
+
+```twig
+{# templates/base.html.twig #}
+{# ... #}
+    <body>
+        <nav>
+            <a href="{{ path('homepage_coucou') }}">Accueil</a>
+            <a href="{{ path('app_admin_post_index') }}">Post CRUD</a>
+        </nav>
+        {% block body %}{% endblock %}
+    </body>
+{# ... #}   
+```
